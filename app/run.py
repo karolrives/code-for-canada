@@ -1,3 +1,4 @@
+from app import app
 import json
 import plotly
 import pandas as pd
@@ -9,7 +10,7 @@ from plotly.graph_objs import Bar, Scatter, Table
 
 
 
-app = Flask(__name__)
+#app = Flask(__name__)
 
 
 # load data
@@ -56,7 +57,7 @@ def index():
                     y = graph_1.values,
                     #name = 'news',
                     width = 0.8,
-                    marker=dict(
+                    marker = dict(
                         color='rgb(0,128,128)'
                     )
                     #orientation = 'h'
@@ -208,9 +209,10 @@ def index():
     return render_template('master.html', ids=ids, graphJSON=graphJSON)
 
 
-def main():
-    app.run(host='0.0.0.0', port=3001, debug=True)
+#def main():
+    #app.run(host='0.0.0.0', port=3001, debug=True)
 
 
 if __name__ == '__main__':
-    main()
+    #main()
+    app.run()
