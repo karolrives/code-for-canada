@@ -15,7 +15,7 @@ from plotly.graph_objs import Bar, Scatter, Table
 
 # load data
 
-df_codes = pd.read_csv('../Data/C4C-dev-challenge-2018.csv')
+df_codes = pd.read_csv('http://codefor.ca/wp-content/uploads/2018/06/C4C-dev-challenge-2018.csv')
 
 # Converting dates to datetime objects
 df_codes.violation_date = pd.to_datetime(df_codes.violation_date)
